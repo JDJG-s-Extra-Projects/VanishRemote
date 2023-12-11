@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.jdjg3493.vanishremote;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
