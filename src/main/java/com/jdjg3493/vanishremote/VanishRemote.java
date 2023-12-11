@@ -19,10 +19,10 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(VanishMod.MOD_ID)
+@Mod(VanishRemote.MOD_ID)
 public class VanishRemote
 {
-    public static final String MOD_ID = "vanishmod";
+    public static final String MOD_ID = "vanishremote";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -42,8 +42,8 @@ public class VanishRemote
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
+        // some pre init code
+        LOGGER.info("HELLO FROM PRE INIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
@@ -60,7 +60,7 @@ public class VanishRemote
 
     private void processIMC(final InterModProcessEvent event)
     {
-        // some example code to receive and process InterModComms from other mods
+        // some example code to receive and process InterMod Communications from other mods
         LOGGER.info("Got IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
